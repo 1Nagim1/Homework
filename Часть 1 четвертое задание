@@ -1,0 +1,25 @@
+sales_1 = float(input("Введите уровень продаж для менеджера 1: "))
+sales_2 = float(input("Введите уровень продаж для менеджера 2: "))
+sales_3 = float(input("Введите уровень продаж для менеджера 3: "))
+
+def calculate_salary(sales):
+    base_salary = 200
+    if sales <= 500:
+        commission = 0.03
+    elif sales <= 1000:
+        commission = 0.05
+    else:
+        commission = 0.08
+    total_salary = base_salary + sales * commission
+    return total_salary
+
+
+salary_1 = calculate_salary(sales_1)
+salary_2 = calculate_salary(sales_2)
+salary_3 = calculate_salary(sales_3)
+
+salaries = [salary_1, salary_2, salary_3]
+best_manager = salaries.index(max(salaries)) + 1  # Номер лучшего менеджера (1, 2, 3)
+
+
+salaries[best_manager - 1] += 200
