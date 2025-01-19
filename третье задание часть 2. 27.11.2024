@@ -1,0 +1,9 @@
+meters = float(input("Введите количество метров: "))
+
+decimeters = meters * 10
+millimeters = meters * 1000
+miles = meters / 1609.34  # 1 миля = 1609.34 метров
+
+print(f"{meters} метров = {decimeters} дециметров")
+print(f"{meters} метров = {millimeters} миллиметров")
+print(f"{meters} метров = {miles} миль")
