@@ -1,0 +1,15 @@
+meters = float(input("Введите количество метров: "))
+
+choice = input("Введите 'мили' для перевода в мили, 'дюймы' для перевода в дюймы или 'ярды' для перевода в ярды: ").lower()
+
+if choice == "мили":
+    result = meters / 1609.34  
+    print(f"{meters} метров = {result} миль")
+elif choice == "дюймы":
+    result = meters * 39.3701  
+    print(f"{meters} метров = {result} дюймов")
+elif choice == "ярды":
+    result = meters * 1.09361  
+    print(f"{meters} метров = {result} ярдов")
+else:
+    print("Некорректный ввод. Пожалуйста, выберите 'мили', 'дюймы' или 'ярды'.")
