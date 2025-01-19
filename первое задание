@@ -1,0 +1,13 @@
+summa = float(input("Введите сумму заказа в ресторане: "))
+tax_rate = 0.13
+tax = summa * tax_rate
+
+tip_rate = 0.18
+tip = order_amount * tip_rate
+
+itogo = order_amount + tax + tip
+
+# Вывод результатов
+print(f"Налог: {tax:.2f} руб.")
+print(f"Чаевые: {tip:.2f} руб.")
+print(f"Итоговая сумма: {itogo:.2f} руб.")
