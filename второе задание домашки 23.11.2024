@@ -1,0 +1,6 @@
+salary = float(input("Введите зарплату за месяц: "))
+credit_payment = float(input("Введите сумму месячного платежа по кредиту: "))
+utility_debt = float(input("Введите задолженность за коммунальные услуги: "))
+
+remaining_amount = salary - (credit_payment + utility_debt)
+print(f"Оставшаяся сумма: {remaining_amount}")
