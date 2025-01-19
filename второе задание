@@ -1,0 +1,8 @@
+souvenir_weight = 75  
+trinket_weight = 112 
+num_souvenirs = int(input("Введите количество сувениров: "))
+num_trinkets = int(input("Введите количество безделушек: "))
+
+total_weight = (num_souvenirs * souvenir_weight) + (num_trinkets * trinket_weight)
+
+print(f"Общий вес посылки: {total_weight} грамм.")
