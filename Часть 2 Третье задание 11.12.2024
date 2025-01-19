@@ -1,0 +1,21 @@
+cost = float(input("Введите стоимость разговора (в валюте): "))
+
+from_operator = input("Введите исходного оператора (A, B, C): ").lower()
+to_operator = input("Введите оператора назначения (A, B, C): ").lower()
+
+
+tariffs = {
+    ('a', 'b'): 1.1, 
+    ('a', 'c'): 1.2,
+    ('b', 'a'): 1.15,
+    ('b', 'c'): 1.05,
+    ('c', 'a'): 1.25,
+    ('c', 'b'): 1.3
+}
+
+
+if (from_operator, to_operator) in tariffs:
+    total_cost = cost * tariffs[(from_operator, to_operator)]
+    print(f"Стоимость разговора с {from_operator.upper()} на {to_operator.upper()}: {total_cost:.2f}")
+else:
+    print("Ошибка: некорректные операторы.")
