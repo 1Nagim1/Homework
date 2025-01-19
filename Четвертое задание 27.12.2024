@@ -1,0 +1,5 @@
+number = input("Введите целое число: ")
+
+result = number.replace('3', '').replace('6', '')
+
+print(f"Число без цифр 3 и 6: {result}")
