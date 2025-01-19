@@ -1,0 +1,8 @@
+count = 0
+
+for num in range(100, 10000):
+    digits = str(num) 
+    if len(set(digits)) == len(digits): 
+        count += 1
+
+print(f"Количество чисел с разными цифрами в диапазоне от 100 до 9999: {count}")
