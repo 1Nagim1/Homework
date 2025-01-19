@@ -1,0 +1,9 @@
+number = float(input("Введите число: "))
+
+power = int(input("Введите степень (от 0 до 7): "))
+
+if 0 <= power <= 7:
+    result = number ** power
+    print(f"{number} в степени {power} равно {result}")
+else:
+    print("Ошибка: степень должна быть от 0 до 7.")
