@@ -1,0 +1,70 @@
+def draw_triangle1(n):
+    """Левый нижний прямоугольный треугольник"""
+    for i in range(1, n + 1):
+        print('*' * i)
+
+def draw_triangle2(n):
+    """Правый нижний прямоугольный треугольник"""
+    for i in range(1, n + 1):
+        print(' ' * (n - i) + '*' * i)
+
+def draw_triangle3(n):
+    """Левый верхний прямоугольный треугольник"""
+    for i in range(n, 0, -1):
+        print('*' * i)
+
+def draw_triangle4(n):
+    """Правый верхний прямоугольный треугольник"""
+    for i in range(n, 0, -1):
+        print(' ' * (n - i) + '*' * i)
+
+def draw_x(n):
+    """Ромб (X-образная фигура)"""
+    for i in range(n):
+        for j in range(n):
+            if i == j or i + j == n - 1:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()
+
+def draw_diagonal(n):
+    """Диагональ из звездочек (левая верхняя к правому нижнему)"""
+    for i in range(n):
+        print(' ' * i + '*')
+
+def menu():
+    while True:
+        print("\nВыберите фигуру:")
+        print("1 - Левый нижний треугольник")
+        print("2 - Правый нижний треугольник")
+        print("3 - Левый верхний треугольник")
+        print("4 - Правый верхний треугольник")
+        print("5 - Ромб (X-образная фигура)")
+        print("6 - Диагональ из звездочек")
+        print("0 - Выход")
+
+        choice = input("Введите номер фигуры: ")
+
+        if choice == '0':
+            print("Выход из программы.")
+            break
+
+        n = int(input("Введите размер (количество строк): "))
+
+        if choice == '1':
+            draw_triangle1(n)
+        elif choice == '2':
+            draw_triangle2(n)
+        elif choice == '3':
+            draw_triangle3(n)
+        elif choice == '4':
+            draw_triangle4(n)
+        elif choice == '5':
+            draw_x(n)
+        elif choice == '6':
+            draw_diagonal(n)
+        else:
+            print("Неверный ввод. Попробуйте снова.")
+
+menu()
